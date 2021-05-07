@@ -1,34 +1,22 @@
 {
   "canisters": {
-    "hello": {
-      "main": "src/hello/main.mo",
-      "type": "motoko"
+    "phone_book": {
+      "main": "src/phone-book/Main.mo"
     },
-    "hello_assets": {
-      "dependencies": [
-        "hello"
-      ],
+    "www": {
       "frontend": {
-        "entrypoint": "src/hello_assets/src/index.html"
+        "entrypoint": "src/www/public/index.html"
       },
-      "source": [
-        "src/hello_assets/assets",
-        "dist/hello_assets/"
-      ],
+      "source": ["src/www/assets", "dist/www/"],
+      "dependencies": ["phone_book"],
       "type": "assets"
     }
   },
-  "defaults": {
-    "build": {
-      "packtool": ""
-    }
-  },
-  "dfx": "0.7.0-beta.3",
   "networks": {
     "local": {
       "bind": "127.0.0.1:8000",
       "type": "ephemeral"
     }
   },
-  "version": 1
+  "dfx": "0.7.0-beta.6"
 }
