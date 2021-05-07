@@ -70,3 +70,17 @@ Verify the following before running this demo:
    ```
 
 1. Open the aforementioned URL in your web browser.
+
+
+1. Backup
+
+   ```text
+   ts-node scripts/backup.ts
+   ```
+
+1. Restore
+
+   ```text
+   ts-node scripts/restore.ts
+   ```
+
